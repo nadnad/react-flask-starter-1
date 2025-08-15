@@ -53,7 +53,7 @@
 - heading "Powered by" [level=3]
 - img "Flask Logo"
 - paragraph: "This React frontend is connected to a Flask server. Below is the response message we receive when we ping the server:"
-- paragraph: "> Flask server running on port 8080. Pinged 2320 times, most recently on Fri Aug 15 15:59:00 2025."
+- paragraph: "> Flask server running on port 8080. Pinged 2598 times, most recently on Fri Aug 15 16:23:48 2025."
 - paragraph: "The server ping count is stored to the database. Click below to reset the counter:"
 - button "Reset Counter"
 - paragraph:
@@ -73,11 +73,7 @@
     - /url: https://github.com/localstack/localstack
   - text: "- a fully functional local AWS cloud stack, and displayed below."
 - button "Upload Image"
-- list:
-  - listitem:
-    - img "Uploaded to LocalStack"
-  - listitem:
-    - img "Uploaded to LocalStack"
+- list
 - heading "Deploy your app to the cloud" [level=2]
 - heading "Powered by" [level=3]
 - img "Shipyard Logo"
@@ -101,4 +97,17 @@
   - listitem: Select the branch you'd like to deploy.
   - listitem: Click Deploy to deploy the app!
 - paragraph: Once the app is up and running, you'll be able to see it by clicking the View Live Environment icon.
+- heading "Feedback" [level=2]
+- paragraph: We'd love to hear from you! Please share your thoughts about this React + Flask starter template.
+- paragraph:
+  - link "View all feedback →":
+    - /url: /feedback
+- text: Your Name
+- textbox
+- text: Email Address
+- textbox
+- text: Your Feedback
+- textbox
+- button "Submit Feedback"
+- iframe
 ```

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, TextField, Button, Typography, Box, Snackbar, Alert, Link } from '@material-ui/core';
+import { Card, TextField, Button, Typography, Box, Snackbar, Link } from '@material-ui/core';
 import { Link as RouterLink } from 'react-router-dom';
 
 function FeedbackCard(props) {
@@ -140,15 +140,8 @@ function FeedbackCard(props) {
         autoHideDuration={6000}
         onClose={handleCloseNotification}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-      >
-        <Alert
-          onClose={handleCloseNotification}
-          severity={notification.severity}
-          variant="filled"
-        >
-          {notification.message}
-        </Alert>
-      </Snackbar>
+        message={notification.message}
+      />
     </>
   );
 }
