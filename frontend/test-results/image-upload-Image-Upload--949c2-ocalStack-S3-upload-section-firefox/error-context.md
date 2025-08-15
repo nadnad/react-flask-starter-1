@@ -1,0 +1,104 @@
+# Page snapshot
+
+```yaml
+- img "Shipyard logo"
+- text: "Replace this with your logo:"
+- code: "'/frontend/src/assets/images/logo.png'"
+- heading "React-Flask-Postgres-LocalStack Starter Project" [level=1]:
+  - link "React":
+    - /url: https://github.com/facebook/react
+  - text: "-"
+  - link "Flask":
+    - /url: https://github.com/pallets/flask
+  - text: "-"
+  - link "Postgres":
+    - /url: https://github.com/postgres/postgres
+  - text: "-"
+  - link "LocalStack":
+    - /url: https://github.com/localstack/localstack
+  - text: Starter Project
+- heading "Update appearance" [level=2]
+- paragraph: Modify the appearance of your app by using Material-UI's built-in themes, or by creating a custom theme.
+- paragraph:
+  - text: To switch from Dark Mode to Light Mode, open
+  - code:
+    - link "frontend/src/components/App.js":
+      - /url: https://github.com/shipyardbuild/shipyard-react-flask-starter/blob/main/frontend/src/components/App.js#L94-L98
+  - text: "and replace the following code:"
+- code: "94 | const theme = createMuiTheme({ 95 | palette: { 96 | type: 'dark', 97 | }, 98 | });"
+- paragraph: "with:"
+- code: "94 | const theme = createMuiTheme({ 95 | palette: { 96 | type: 'light', 97 | }, 98 | });"
+- paragraph:
+  - link "Click here":
+    - /url: https://material-ui.com/customization/theming/
+  - text: to learn more about Material-UI themes.
+- heading "Use Material-UI components" [level=2]
+- paragraph: Material-UI provides a variety of UI components to render data.
+- list: Winter Spring Summer Fall
+- paragraph:
+  - text: To change the chips above to list items, open
+  - code:
+    - link "frontend/src/components/MaterialCard.js":
+      - /url: https://github.com/shipyardbuild/shipyard-react-flask-starter/blob/main/frontend/src/components/MaterialCard.js#L27-L29
+  - text: "and replace the following code:"
+- code: "27 | {seasons.map((season) => ( 28 | <Chip key={season} label={season} /> 29 | ))}"
+- paragraph: "with:"
+- code: "27 | {seasons.map((season) => ( 28 | <ListItem button> 29 | <ListItemText primary={season} /> 30 | </ListItem> 31 | ))}"
+- paragraph:
+  - text: "Read the Material-UI docs to learn more about components:"
+  - link "https://material-ui.com":
+    - /url: https://material-ui.com
+  - text: .
+- heading "Connect to a server" [level=2]
+- heading "Powered by" [level=3]
+- img "Flask Logo"
+- paragraph: "This React frontend is connected to a Flask server. Below is the response message we receive when we ping the server:"
+- paragraph: "> Flask server running on port 8080. Pinged 2320 times, most recently on Fri Aug 15 15:59:00 2025."
+- paragraph: "The server ping count is stored to the database. Click below to reset the counter:"
+- button "Reset Counter"
+- paragraph:
+  - text: The endpoint that resets the ping counter is located in
+  - code:
+    - link "backend/src/routes/counter.py":
+      - /url: https://github.com/shipyardbuild/shipyard-react-flask-starter/blob/main/backend/src/routes/counter.py#L23-L27
+  - text: ":"
+- code: "23 | @blueprint.route('/api/v1/reset/') 24 | def reset(): 25 | counter = Counter.get_create(label='Test') 26 | counter.reset() 27 | return jsonify(response=counter.count)"
+- heading "Store files in S3, locally" [level=2]
+- heading "Powered by" [level=3]
+- img "LocalStack Logo"
+- paragraph: Click below to select and upload an image from your computer.
+- paragraph:
+  - text: The image will be stored in a local S3 bucket, powered by
+  - link "LocalStack":
+    - /url: https://github.com/localstack/localstack
+  - text: "- a fully functional local AWS cloud stack, and displayed below."
+- button "Upload Image"
+- list:
+  - listitem:
+    - img "Uploaded to LocalStack"
+  - listitem:
+    - img "Uploaded to LocalStack"
+- heading "Deploy your app to the cloud" [level=2]
+- heading "Powered by" [level=3]
+- img "Shipyard Logo"
+- paragraph:
+  - text: Use
+  - link "Shipyard":
+    - /url: https://shipyard.build
+  - text: "to deploy your app to the cloud, following these simple steps:"
+- list:
+  - listitem:
+    - text: Go to
+    - link "https://shipyard.build":
+      - /url: https://shipyard.build
+    - text: .
+  - listitem:
+    - text: Sign in using your
+    - link "GitHub":
+      - /url: https://github.com
+    - text: credentials.
+  - listitem: Click Add Repository to select the repo for this starter project.
+  - listitem: Select the branch you'd like to deploy.
+  - listitem: Click Deploy to deploy the app!
+- paragraph: Once the app is up and running, you'll be able to see it by clicking the View Live Environment icon.
+```

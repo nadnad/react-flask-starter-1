@@ -26,7 +26,7 @@ class Application:
         self.flask_app.config.from_object(S)
 
         # Register the public routes
-        for blueprint in [routes.counter, routes.localstack]:
+        for blueprint in [routes.counter, routes.localstack, routes.feedback]:
             self.flask_app.register_blueprint(blueprint)
 
         # Init Celery

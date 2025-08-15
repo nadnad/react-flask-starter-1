@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__shipyard__get_environments"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
